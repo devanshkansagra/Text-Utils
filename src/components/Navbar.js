@@ -8,10 +8,12 @@ export default function Navbar(props) {
     let body = document.body;
     function chToDark() {
         theme = body.setAttribute("data-bs-theme","dark");
+        props.showAlert(" Changed to Dark Mode", "success");
         setTheme(theme);
     }
     function chToLight() {
         theme = body.setAttribute("data-bs-theme","light");
+        props.showAlert(" Changed to Light Mode", "success");
         setTheme(theme)
     }
     return (
